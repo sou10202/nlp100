@@ -11,6 +11,9 @@ class Morph:
     def __str__(self):
         return 'surface: {}, base: {}, pos: {}, pos1: {}'.format(self.surface, self.base, self.pos, self.pos1)
     
+    def __repr__(self):
+        return self.surface
+
 def read_parsed_file(file):
     with open(file, 'r') as f:
         lines = f.readlines()
