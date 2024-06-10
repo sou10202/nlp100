@@ -18,4 +18,4 @@ test = data.iloc[train_row+test_row:]
 train.to_csv('src/train.txt', sep='\t', index=False)
 valid.to_csv('src/valid.txt', sep='\t', index=False)
 test.to_csv('src/test.txt', sep='\t', index=False)
-print('')
+print()
