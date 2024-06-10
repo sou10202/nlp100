@@ -1,2 +1,5 @@
-src/rawdata
-src/__MACOSX/
+/src/rawdata
+/src/__MACOSX/
+/.venv/
+/src/*.txt
+/src/*
