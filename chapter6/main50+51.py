@@ -49,7 +49,7 @@ train_x.to_csv('src/train.feature.txt', sep='\t', index=False)
 valid_x.to_csv('src/valid.feature.txt', sep='\t', index=False)
 test_x.to_csv('src/test.feature.txt', sep='\t', index=False)
 
-data_y = df['CATEGORY']
+data_y = data['CATEGORY']
 train_y = data_y.iloc[:split_point].to_csv('src/train.label.txt', sep='\t', index=False)
 valid_y = data_y.iloc[split_point:split_point*2].to_csv('src/valid.label.txt', sep='\t', index=False)
 test_y = data_y.iloc[split_point*2:].to_csv('src/test.label.txt', sep='\t', index=False)

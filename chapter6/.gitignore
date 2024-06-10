@@ -2,4 +2,4 @@
 /src/__MACOSX/
 /.venv/
 /src/*.txt
-/src/*
+/src/
