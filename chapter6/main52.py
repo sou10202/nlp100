@@ -53,3 +53,12 @@ features = train_x.columns.values
 for i in range(len(model.classes_)):
     importance = model.coef_[i]
     feature_importance = [(features[j], np.abs(importance[j])) for j in range(len(importance))]
+    best = sorted(feature_importance, key=lambda x: x[1])[:10]
+    worst = sorted(feature_importance, key=lambda x: x[1], reverse=True)[:10]
+    print(f'==={model.classes_[i]}のとき===')
+    print('重要度の高い特徴量トップ10')
+    for j in range(len(best)):
+        print(f'{j+1}位: {best[j][0]} {best[j][1]}')
+    print('重要度の低い特徴量トップ10')
+    for j in range(len(worst)):
+        print(f'{j+1}位: {worst[j][0]} {worst[j][1]}')
